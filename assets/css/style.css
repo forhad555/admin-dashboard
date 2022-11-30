@@ -1,0 +1,40 @@
+/* Google Inter Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+    /* Colors */
+    --body-color:#F7F9FB;
+    --sidebar-color:#ffffff;
+    --sidebar-text-color:#707070;
+    --sidebar-icon-color:#707070;
+    --selection-text-color:#ffffff;
+    --primary-color:#0d6efd;
+
+    /* Transitions */
+    --trans-02: all 0.2s ease;
+    --trans-03: all 0.3s ease;
+    --trans-04: all 0.4s ease;
+    --trans-05: all 0.5s ease;
+
+}
+
+::selection {
+    background-color: var(--primary-color);
+    color:var(--selection-text-color);
+}
+
+
+
+body {
+    overflow: hidden;
+    min-height: 100vh;
+    background-color: var(--body-color);
+    transition: var(--trans-05);
+}
