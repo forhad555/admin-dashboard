@@ -10,12 +10,20 @@
 
 :root{
     /* Colors */
-    --body-color:#F7F9FB;
+    --body-color:#f2f7ff;
     --sidebar-color:#ffffff;
     --sidebar-text-color:#707070;
     --sidebar-icon-color:#707070;
     --selection-text-color:#ffffff;
     --primary-color:#0d6efd;
+    --card-main-bg: #ffffff;
+
+    --card-main-border: 1px solid #eeeeee;
+    --card-main-box-shadow: 0 0 0.875rem 0 rgb(41 48 66 / 5%);
+    --card-main-border-radius: 5px ;
+    --card-header-border: 1px solid #eeeeee;
+    --card-header-padding: 10px 20px;
+    --card-header-text-size: 16px;
 
     /* Transitions */
     --trans-02: all 0.2s ease;
@@ -33,8 +41,74 @@
 
 
 body {
-    overflow: hidden;
-    min-height: 100vh;
     background-color: var(--body-color);
     transition: var(--trans-05);
+}
+
+.sidebar {
+    background-color: var(--sidebar-color);
+    width: 250px;
+    position: fixed;
+    top:0;
+    bottom: 0;
+}
+
+.main-section {
+    position: relative;
+    height: 100vh;
+    left: 250px;
+    width: calc(100% - 250px);
+
+    padding-top: 75px;
+}
+
+.card-main {
+    background-color: var(--card-main-bg);
+    border:var(--card-main-border);
+    border-radius: var(--card-main-border-radius);
+    box-shadow: var(--card-main-box-shadow);
+}
+
+.card-header-main {
+    background-color: var(--card-main-bg);
+    border-bottom: var(--card-header-border);
+    padding: var(--card-header-padding);
+}
+
+
+.card-header-main h4{
+   margin: 0;
+   font-size: var(--card-header-text-size);
+}
+
+.my-navbar {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: calc(100% - 250px);
+    left: 250px;
+    z-index: 100;
+    padding: 10px 20px;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+}
+
+
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .main-section {
+        left: 0;
+        width: 100%;
+    }
+
+    .my-navbar {
+        left: 0;
+        width: 100%;
+    }
 }
