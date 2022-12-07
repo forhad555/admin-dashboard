@@ -79,15 +79,15 @@ body {
 
 .sidebar ul.sidebar-nav li a {
     text-decoration: none;
-    color: #666666;
+    color: #6d6b6b;
     display: block;
-    padding: 10px 8px;
+    padding: 10px 0;
     border-radius: 10px;
     transition: var(--trans-04);
-    font-size: 16px;
+    font-size: 15px;
     display: flex;
     align-items: center;
-    font-weight: 400;
+    font-weight: 500;
 }
 .sidebar ul.sidebar-nav li a:hover {
     color: #333333;
@@ -104,13 +104,31 @@ body {
 }
 
 .sidebar ul li.sidebar-title h4 {
-    font-size: 13px;
+    font-size: 12px;
     text-transform: uppercase;
-    color: #888888;
+    color: #959595;
     padding: 15px 0;
-    margin: 0 0 0 25px;
     font-weight: 600;
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 10px;
 }
+
+
+.sidebar .brand-name {
+    position: fixed;
+    background:var(--primary-color);
+    color: #ffffff;
+    width: 250px;
+    padding: 18px 0;
+    top: 0;
+}
+
+.sidebar ul.sidebar-nav {
+    margin-top: 60px;
+}
+
+
+
 
 /* Sidebar Sub-menu style */
 
@@ -136,14 +154,12 @@ body {
 
 
 
-
 .main-section {
     position: relative;
     height: 100vh;
     left: 250px;
     width: calc(100% - 250px);
-
-    padding-top: 75px;
+    padding: 80px 10px 0 10px;
 }
 
 .card-main {
@@ -177,6 +193,20 @@ body {
     z-index: 100;
     padding: 10px 20px;
 }
+
+
+.navbar ul.navbar-nav li.nav-item a {
+    padding: 8px 20px;
+}
+
+.navbar i {
+    font-size: 25px;
+    cursor: poniter;
+}
+
+
+
+
 
 
 
