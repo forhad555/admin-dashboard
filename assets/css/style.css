@@ -191,7 +191,7 @@ body {
     width: calc(100% - 250px);
     left: 250px;
     z-index: 100;
-    padding: 10px 20px;
+    padding: 8px 20px;
 }
 
 
@@ -205,8 +205,27 @@ body {
 }
 
 
+.dropdown-toggle::after {
+    display: none;
+}
 
+.navbar .navbar-nav .profile-details img {
+    width: 37px;
+    height: 37px;
+    margin-right: 6px;
+}
 
+.dropdown-menu {
+    transition: var(--trans-04);
+}
+
+.my-dropdown {
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px 0px, rgba(17, 17, 26, 0.05) 0px 8px 32px 0px;
+    border: 1px solid #e6e6e6;
+    opacity: 1;
+    transform: translateY(10px) translateY(-10px);
+    transition: transform 300ms ease 0s, opacity 300ms ease 0s;
+}
 
 
 
