@@ -249,6 +249,26 @@ body {
     width: 60px;
 }
 
+span.status-paid-bg {
+    color: #ffffff;
+    background-color: #42d29d;
+}
+
+span.status-upaid-bg {
+    color: #ffffff;
+    background-color: #fa6767;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+    background-color: #f5f9ff;
+    transition: var(--trans-03);
+  }
+tbody.tbody-text {
+    font-weight: 400;
+    font-size: 15px;
+    color: #5e5e5e;
+}
+
 
 @media (max-width: 768px) {
     .sidebar {
