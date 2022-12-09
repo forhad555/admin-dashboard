@@ -231,9 +231,9 @@ body {
     margin-right: 6px;
 }
 
-.dropdown-menu {
+/* .dropdown-menu {
     transition: var(--trans-04);
-}
+} */
 
 .my-dropdown {
     box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px 0px, rgba(17, 17, 26, 0.05) 0px 8px 32px 0px;
@@ -263,11 +263,51 @@ span.status-upaid-bg {
     background-color: #f5f9ff;
     transition: var(--trans-03);
   }
+
+
 tbody.tbody-text {
     font-weight: 400;
     font-size: 15px;
     color: #5e5e5e;
 }
+
+.customer-bill-list-filter .form-select {
+    padding: 6px 35px 6px 20px;
+    border: 0;
+    font-size: 16px;
+    color: #5c5c5e;
+}
+
+.customer-bill-list-filter .form-select:focus {
+    box-shadow: none;
+}
+
+button.export-data {
+    border: 1px solid #ced4da;
+    font-size: 14px;
+    color: #5c5c5e;
+}
+
+button.export-data-toggle {
+    border: 1px solid #ced4da;
+    font-size: 14px;
+    color: #5c5c5e;
+}
+
+button.export-data:hover,
+button.export-data:focus,
+button.export-data-toggle:hover,
+button.export-data-toggle:focus {
+    border: 1px solid #ced4da;
+    background-color: #D3E3FD;
+}
+
+.bill-list-title {
+    background-color: #F8FAFD;
+}
+
+
+
 
 
 @media (max-width: 768px) {
