@@ -59,15 +59,15 @@
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="#" class="sidebar-menu">
-                    <i class='bx bx-shield-plus icon'></i>
-                    <span class="link_name">Authentication</span>
+                <a href="#today-expence-list" class="sidebar-menu">
+                    <i class='bx bx-message-alt-minus'></i>
+                    <span class="link_name">Today Expence List</span>
                 </a>
             </li>
             <li class="sidebar-nav-item">
-                <a href="#" class="sidebar-menu">
-                    <i class='bx bx-user-voice icon'></i>
-                    <span class="link_name">Corporate</span>
+                <a href="#today-bill-recived" class="sidebar-menu">
+                    <i class='bx bx-message-alt-add'></i>
+                    <span class="link_name">Today Bill Recived</span>
                 </a>
             </li>
             <li class="sidebar-title">
@@ -216,8 +216,8 @@
                     <div class="card card-main mb-3">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-center">
-                                <div class="price-details">
-                                    <h4>today expence total</h4>
+                                <div class="today-income">
+                                    <h4>today income</h4>
                                     <h3>$850</h3>
                                 </div>
                                 <div class="price-icon">
@@ -231,8 +231,8 @@
                     <div class="card card-main mb-3">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-center">
-                                <div class="price-details">
-                                    <h4>today expence total</h4>
+                                <div class="today-expence">
+                                    <h4>today expence</h4>
                                     <h3>$250</h3>
                                 </div>
                                 <div class="price-icon">
@@ -246,8 +246,8 @@
                     <div class="card card-main mb-3">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-center">
-                                <div class="price-details">
-                                    <h4>today expence total</h4>
+                                <div class="monthly-income">
+                                    <h4>monthly income</h4>
                                     <h3>$350</h3>
                                 </div>
                                 <div class="price-icon">
@@ -261,8 +261,8 @@
                     <div class="card card-main mb-3">
                         <div class="card-body">
                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="price-details">
-                                    <h4>today expence total</h4>
+                                <div class="monthly-expence">
+                                    <h4>monthly expence</h4>
                                     <h3>$50</h3>
                                 </div>
                                 <div class="price-icon">
@@ -328,7 +328,7 @@
                                 </div>
                                 <div class="customer-search me-3">
                                     <div class="d-flex" role="search">
-                                        <input id="myInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                        <input id="customer-bill-list" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                                        <!--  <button class="btn btn-primary" type="submit">Search</button> -->
                                       </div>
                                 </div>
@@ -370,7 +370,7 @@
                                     <th scope="col">Status</th>
                                   </tr>
                                 </thead>
-                                <tbody id="tableData" class="tbody-text">
+                                <tbody id="customer-bill-list-data" class="tbody-text">
                                   <tr>
                                     <td>
                                         <div class="form-check">
@@ -537,7 +537,381 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div><!--Today Customer Bill List End-->
+
+
+            <div class="row">
+                <div id="today-expence-list" class="col-6">
+                    <div class="card card-main mb-3">
+                        <div class="card-header card-header-main py-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="customer-bill-list-title flex-grow-1">
+                                    <h4>Today Expence List  </h4>
+                                </div>
+                                <div class="customer-bill-list-filter me-3">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Bill Status</option>
+                                        <option value="1">Paid</option>
+                                        <option value="2">Unpaid</option>
+                                        <option value="3">Pending</option>
+                                        <option value="3">Disconnect</option>
+                                      </select>
+                                </div>
+                                <div class="customer-search me-3">
+                                    <div class="d-flex" role="search">
+                                        <input id="today-expence-list" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                       <!--  <button class="btn btn-primary" type="submit">Search</button> -->
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body py-0 table-responsive">
+                            <table id="dtBasicExample" class="table table-hover results">
+                                <thead class="today-expence-list-title">
+                                  <tr>
+                                    <th scope="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              
+                                            </label>
+                                          </div>
+                                    </th>
+                                    <th scope="col">Expence Reason</th>
+                                    <th scope="col">Amount</th>
+                                    <th scope="col">Date</th>
+                                  </tr>
+                                </thead>
+                                <tbody id="today-expence-total-data" class="tbody-text">
+                                  <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              
+                                            </label>
+                                          </div>
+                                    </td>
+                                    <td>Korim Miah</td>
+                                    <td class="money-minus">+1000</td>
+                                    <td>14-12-2022</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              
+                                            </label>
+                                          </div>
+                                    </td>
+                                    <td>Bahar Mia</td>
+                                    <td class="money-minus">-690</td>
+                                    <td>16-12-2022</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              
+                                            </label>
+                                          </div>
+                                    </td>
+                                    <td>Solim Ali</td>
+                                    <td class="money-minus">-500</td>
+                                    <td>17-12-2022</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              
+                                            </label>
+                                          </div>
+                                    </td>
+                                    <td>Solim Ali</td>
+                                    <td class="money-minus">+500</td>
+                                    <td>18-12-2022</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              
+                                            </label>
+                                          </div>
+                                    </td>
+                                    <td>Solim Ali</td>
+                                    <td class="money-minus">-500</td>
+                                    <td>19-12-2022</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              
+                                            </label>
+                                          </div>
+                                    </td>
+                                    <td>Solim Ali</td>
+                                    <td class="money-minus">+500</td>
+                                    <td>19-12-2022</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              
+                                            </label>
+                                          </div>
+                                    </td>
+                                    <td>Solim Ali</td>
+                                    <td class="money-minus">+500</td>
+                                    <td>19-12-2022</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              
+                                            </label>
+                                          </div>
+                                    </td>
+                                    <td>Solim Ali</td>
+                                    <td class="money-minus">+500</td>
+                                    <td>19-12-2022</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              
+                                            </label>
+                                          </div>
+                                    </td>
+                                    <td>Solim Ali</td>
+                                    <td class="money-minus">+500</td>
+                                    <td>19-12-2022</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              
+                                            </label>
+                                          </div>
+                                    </td>
+                                    <td>Solim Ali</td>
+                                    <td class="money-minus">+500</td>
+                                    <td>19-12-2022</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="today-bill-recived" class="col-6">
+                    <div class="card card-main mb-3">
+                        <div class="card-header card-header-main py-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="customer-bill-list-title flex-grow-1">
+                                    <h4>Today Bill Recived </h4>
+                                </div>
+                                <div class="customer-bill-list-filter me-3">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Bill Status</option>
+                                        <option value="1">Paid</option>
+                                        <option value="2">Unpaid</option>
+                                        <option value="3">Pending</option>
+                                        <option value="3">Disconnect</option>
+                                      </select>
+                                </div>
+                                <div class="customer-search me-3">
+                                    <div class="d-flex" role="search">
+                                        <input id="today-bill-recived" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                       <!--  <button class="btn btn-primary" type="submit">Search</button> -->
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body py-0 table-responsive">
+                            <table id="dtBasicExample" class="table table-hover results">
+                                <thead class="today-customer-bill-recive-title">
+                                  <tr>
+                                    <th scope="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              
+                                            </label>
+                                          </div>
+                                    </th>
+                                    <th scope="col">Customer Name</th>
+                                    <th scope="col">Customer ID</th>
+                                    <th scope="col">Amount</th>
+                                    <th scope="col">Transection ID</th>
+                                  </tr>
+                                </thead>
+                                <tbody id="today-bill-recived-data" class="tbody-text">
+                                  <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              
+                                            </label>
+                                          </div>
+                                    </td>
+                                    <td>Korim Miah</td>
+                                    <td>10254</td>
+                                    <td class="money-added">1000</td>
+
+                                    <td>TSID5y5896dG</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              
+                                            </label>
+                                          </div>
+                                    </td>
+                                    <td>Bahar Mia</td>
+                                    <td>10255</td>
+                                    <td class="money-added">1000</td>
+                                    <td>TSID5y5696dD</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              
+                                            </label>
+                                          </div>
+                                    </td>
+                                    <td>Solim Ali</td>
+                                    <td>10256</td>
+                                    <td class="money-added">1000</td>
+                                    <td>TSID6X5696dR</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              
+                                            </label>
+                                          </div>
+                                    </td>
+                                    <td>Solim Ali</td>
+                                    <td>10256</td>
+                                    <td class="money-added">1000</td>
+                                    <td>TSID6X5696dR</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              
+                                            </label>
+                                          </div>
+                                    </td>
+                                    <td>Solim Ali</td>
+                                    <td>10256</td>
+                                    <td class="money-added">1000</td>
+                                    <td>TSID6X5696dR</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              
+                                            </label>
+                                          </div>
+                                    </td>
+                                    <td>Solim Ali</td>
+                                    <td>10256</td>
+                                    <td class="money-added">1000</td>
+                                    <td>TSID6X5696dR</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              
+                                            </label>
+                                          </div>
+                                    </td>
+                                    <td>Solim Ali</td>
+                                    <td>10256</td>
+                                    <td class="money-added">1000</td>
+                                    <td>TSID6X5696dR</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              
+                                            </label>
+                                          </div>
+                                    </td>
+                                    <td>Solim Ali</td>
+                                    <td>10256</td>
+                                    <td class="money-added">1000</td>
+                                    <td>TSID6X5696dR</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              
+                                            </label>
+                                          </div>
+                                    </td>
+                                    <td>Solim Ali</td>
+                                    <td>10256</td>
+                                    <td class="money-added">1000</td>
+                                    <td>TSID6X5696dR</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              
+                                            </label>
+                                          </div>
+                                    </td>
+                                    <td>Solim Ali</td>
+                                    <td>10256</td>
+                                    <td class="money-added">1000</td>
+                                    <td>TSID6X5696dR</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- End Today Expence List-->
+
+
         </div>
     </div>
 </div>
