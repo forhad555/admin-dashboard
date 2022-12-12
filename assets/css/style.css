@@ -325,15 +325,15 @@ thead.today-customer-bill-recive-title {
 }
 
 .expence-total-amount h5 {
-    font-size: 18px;
+    font-size: 22px;
     text-transform: uppercase;
     font-weight: 300;
     color: #6f6a6a;
 }
 
 .expence-total-amount h3 {
-    font-size: 32px;
-    font-weight: 600;
+    font-size: 40px;
+    font-weight: 700;
     color: #ed648b;
 }
 

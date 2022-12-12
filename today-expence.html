@@ -26,21 +26,22 @@
         </div>
         <ul class="sidebar-nav px-3">
             <li class="sidebar-nav-item">
-                <a class="sidebar-menu" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="sidebar-menu" href="index.html">
                     <i class='bx bx-home icon'></i>
                     <span class="link_name">Dashboard</span>
+                </a>
+               
+            </li>
+            <li class="sidebar-nav-item">
+                <a class="sidebar-menu" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class='bx bx-user-circle icon'></i>
+                    <span class="link_name">User Profile</span>
                 </a>
                 <ul class="sidebar-sub-menu collapse" id="collapseExample">
                     <li><a href="#" class="link_name">Dashboard</a></li>
                     <li><a href="#" class="link_name">Dashboard</a></li>
                     <li><a href="#" class="link_name">Dashboard</a></li>
                 </ul>
-            </li>
-            <li class="sidebar-nav-item">
-                <a href="#" class="sidebar-menu">
-                    <i class='bx bx-user-circle icon'></i>
-                    <span class="link_name">User Profile</span>
-                </a>
             </li>
             <li class="sidebar-nav-item">
                 <a href="#" class="sidebar-menu">
@@ -209,116 +210,18 @@
           </nav> <!-- Navbar Closed -->
 
         <div class="main-section">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xl-3 col-md-6">
-                    <div class="card card-main mb-3">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="today-income">
-                                    <h4>today income</h4>
-                                    <h3>$850</h3>
-                                </div>
-                                <div class="price-icon">
-                                    <i class='bx bx-bar-chart' ></i>
-                                </div>
-                           </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6">
-                    <div class="card card-main mb-3">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="today-expence">
-                                    <h4>today expence</h4>
-                                    <h3>$250</h3>
-                                </div>
-                                <div class="price-icon">
-                                    <i class='bx bx-bar-chart' ></i>
-                                </div>
-                           </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6">
-                    <div class="card card-main mb-3">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="monthly-income">
-                                    <h4>monthly income</h4>
-                                    <h3>$350</h3>
-                                </div>
-                                <div class="price-icon">
-                                    <i class='bx bx-bar-chart' ></i>
-                                </div>
-                           </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6">
-                    <div class="card card-main mb-3">
-                        <div class="card-body">
-                           <div class="d-flex justify-content-between align-items-center">
-                                <div class="monthly-expence">
-                                    <h4>monthly expence</h4>
-                                    <h3>$50</h3>
-                                </div>
-                                <div class="price-icon">
-                                    <i class='bx bx-bar-chart' ></i>
-                                </div>
-                           </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-xl-6 col-md-12">
-                    <div class="card card-main mb-3">
-                        <div class="card-header card-header-main">
-                            <h4>Bar Chart</h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="bar-chart">
-                                <canvas id="barChart"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-6 col-md-12">
-                    <div class="card card-main mb-3">
-                        <div class="card-header card-header-main">
-                            <h4>Line Chart</h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="line-chart">
-                                <canvas id="lineChart"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12">
+           <div class="container-fluid">
+             <div class="row">
+                <div id="today-expence-list-area" class="col-12">
                     <div class="card card-main mb-3 table-responsive">
                         <div class="card-header card-header-main py-3">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="customer-bill-list-title flex-grow-1">
-                                    <h4>Today Customer Bill List  </h4>
+                                    <h4>Today Expence List  </h4>
                                 </div>
                                 <div class="customer-bill-list-filter me-3">
                                     <select class="form-select" aria-label="Default select example">
                                         <option selected>Action</option>
-                                        <option value="1">Delete</option>
-                                        <option value="2">Edit</option>
-                                        <option value="3">Add</option>
-                                      </select>
-                                </div>
-                                <div class="customer-bill-list-filter me-3">
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>Sort By</option>
                                         <option value="1">Paid</option>
                                         <option value="2">Unpaid</option>
                                         <option value="3">Pending</option>
@@ -327,31 +230,16 @@
                                 </div>
                                 <div class="customer-search me-3">
                                     <div class="d-flex" role="search">
-                                        <input id="customer-bill-list" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                        <input id="today-expence-list" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                                        <!--  <button class="btn btn-primary" type="submit">Search</button> -->
-                                      </div>
-                                </div>
-                                <div class="customer-search me-3">
-                                    <div class="btn-group">
-                                        <button class="btn export-data" type="button">
-                                         Export Data
-                                        </button>
-                                        <button type="button" class="btn export-data-toggle dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class='bx bx-chevron-down' ></i>
-                                            <span class="visually-hidden">Toggle Dropdown</span>
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Excel</a></li>
-                                            <li><a class="dropdown-item" href="#">MS Word</a></li>
-                                            <li><a class="dropdown-item" href="#">PDF</a></li>
-                                        </ul>
                                       </div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="card-body py-0">
                             <table id="dtBasicExample" class="table table-hover results">
-                                <thead class="bill-list-title">
+                                <thead class="today-expence-list-title">
                                   <tr>
                                     <th scope="col">
                                         <div class="form-check">
@@ -361,15 +249,14 @@
                                             </label>
                                           </div>
                                     </th>
-                                    <th scope="col">Customer Name</th>
-                                    <th scope="col">Customer ID</th>
+                                    <th scope="col">Reason</th>
+                                    <th scope="col">Expenced By</th>
                                     <th scope="col">Amount</th>
                                     <th scope="col">Date</th>
-                                    <th scope="col">Transection ID</th>
                                     <th scope="col">Status</th>
                                   </tr>
                                 </thead>
-                                <tbody id="customer-bill-list-data" class="tbody-text">
+                                <tbody id="today-expence-total-data" class="tbody-text">
                                   <tr>
                                     <td>
                                         <div class="form-check">
@@ -379,14 +266,13 @@
                                             </label>
                                           </div>
                                     </td>
-                                    <td>Korim Miah</td>
-                                    <td>10254</td>
-                                    <td>1000</td>
-                                    <td>10/12/2022</td>
-                                    <td>TSID5y5896dG</td>
-                                    
+                                    <td>Guest Coffe 2 Cups</td>
+                                    <td>Udoy</td>
+                                    <td class="money-minus">-60</td>
+                                    <td>14-12-2022</td>
                                     <td><span class="badge status-paid-bg bill-status">Paid</span></td>
                                   </tr>
+
                                   <tr>
                                     <td>
                                         <div class="form-check">
@@ -396,29 +282,13 @@
                                             </label>
                                           </div>
                                     </td>
-                                    <td>Bahar Mia</td>
-                                    <td>10255</td>
-                                    <td>1000</td>
-                                    <td>12/12/2022</td>
-                                    <td>TSID5y5696dD</td>
-                                    <td><span class="badge status-upaid-bg bill-status">Unpaid</span></td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                              
-                                            </label>
-                                          </div>
-                                    </td>
-                                    <td>Solim Ali</td>
-                                    <td>10256</td>
-                                    <td>500</td>
-                                    <td>14/12/2022</td>
-                                    <td>TSID6X5696dR</td>
+                                    <td>4 Cups Tea & 4 Packets Biskit</td>
+                                    <td>Mofojjol</td>
+                                    <td class="money-minus">-43</td>
+                                    <td>14-12-2022</td>
                                     <td><span class="badge status-paid-bg bill-status">Paid</span></td>
                                   </tr>
+
                                   <tr>
                                     <td>
                                         <div class="form-check">
@@ -428,45 +298,13 @@
                                             </label>
                                           </div>
                                     </td>
-                                    <td>Solim Ali</td>
-                                    <td>10256</td>
-                                    <td>500</td>
-                                    <td>14/12/2022</td>
-                                    <td>TSID6X5696dR</td>
-                                    <td><span class="badge status-upaid-bg bill-status">Unpaid</span></td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                              
-                                            </label>
-                                          </div>
-                                    </td>
-                                    <td>Solim Ali</td>
-                                    <td>10256</td>
-                                    <td>500</td>
-                                    <td>14/12/2022</td>
-                                    <td>TSID6X5696dR</td>
-                                    <td><span class="badge status-upaid-bg bill-status">Unpaid</span></td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                              
-                                            </label>
-                                          </div>
-                                    </td>
-                                    <td>Solim Ali</td>
-                                    <td>10256</td>
-                                    <td>500</td>
-                                    <td>14/12/2022</td>
-                                    <td>TSID6X5696dR</td>
+                                    <td>New Connection Gari Bara</td>
+                                    <td>Salman and Sojib</td>
+                                    <td class="money-minus">-120</td>
+                                    <td>14-12-2022</td>
                                     <td><span class="badge status-paid-bg bill-status">Paid</span></td>
                                   </tr>
+
                                   <tr>
                                     <td>
                                         <div class="form-check">
@@ -476,29 +314,13 @@
                                             </label>
                                           </div>
                                     </td>
-                                    <td>Solim Ali</td>
-                                    <td>10256</td>
-                                    <td>500</td>
-                                    <td>14/12/2022</td>
-                                    <td>TSID6X5696dR</td>
-                                    <td><span class="badge status-upaid-bg bill-status">Unpaid</span></td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                              
-                                            </label>
-                                          </div>
-                                    </td>
-                                    <td>Solim Ali</td>
-                                    <td>10256</td>
-                                    <td>500</td>
-                                    <td>14/12/2022</td>
-                                    <td>TSID6X5696dR</td>
+                                    <td>Gari Bara</td>
+                                    <td>Kamal</td>
+                                    <td class="money-minus">-80</td>
+                                    <td>14-12-2022</td>
                                     <td><span class="badge status-paid-bg bill-status">Paid</span></td>
                                   </tr>
+
                                   <tr>
                                     <td>
                                         <div class="form-check">
@@ -508,13 +330,13 @@
                                             </label>
                                           </div>
                                     </td>
-                                    <td>Solim Ali</td>
-                                    <td>10256</td>
-                                    <td>500</td>
-                                    <td>14/12/2022</td>
-                                    <td>TSID6X5696dR</td>
+                                    <td>Guest Coffe 2 Cups</td>
+                                    <td>Udoy</td>
+                                    <td class="money-minus">+1000</td>
+                                    <td>14-12-2022</td>
                                     <td><span class="badge status-paid-bg bill-status">Paid</span></td>
                                   </tr>
+
                                   <tr>
                                     <td>
                                         <div class="form-check">
@@ -524,19 +346,84 @@
                                             </label>
                                           </div>
                                     </td>
-                                    <td>Solim Ali</td>
-                                    <td>10256</td>
-                                    <td>500</td>
-                                    <td>14/12/2022</td>
-                                    <td>TSID6X5696dR</td>
+                                    <td>Guest Coffe 2 Cups</td>
+                                    <td>Udoy</td>
+                                    <td class="money-minus">+1000</td>
+                                    <td>14-12-2022</td>
                                     <td><span class="badge status-paid-bg bill-status">Paid</span></td>
                                   </tr>
+
+                                  <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              
+                                            </label>
+                                          </div>
+                                    </td>
+                                    <td>Guest Coffe 2 Cups</td>
+                                    <td>Udoy</td>
+                                    <td class="money-minus">+1000</td>
+                                    <td>14-12-2022</td>
+                                    <td><span class="badge status-paid-bg bill-status">Paid</span></td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              
+                                            </label>
+                                          </div>
+                                    </td>
+                                    <td>Guest Coffe 2 Cups</td>
+                                    <td>Udoy</td>
+                                    <td class="money-minus">+1000</td>
+                                    <td>14-12-2022</td>
+                                    <td><span class="badge status-paid-bg bill-status">Paid</span></td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              
+                                            </label>
+                                          </div>
+                                    </td>
+                                    <td>Guest Coffe 2 Cups</td>
+                                    <td>Udoy</td>
+                                    <td class="money-minus">+1000</td>
+                                    <td>14-12-2022</td>
+                                    <td><span class="badge status-paid-bg bill-status">Paid</span></td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              
+                                            </label>
+                                          </div>
+                                    </td>
+                                    <td>Guest Coffe 2 Cups</td>
+                                    <td>Udoy</td>
+                                    <td class="money-minus">+1000</td>
+                                    <td>14-12-2022</td>
+                                    <td><span class="badge status-paid-bg bill-status">Paid</span></td>
+                                  </tr>
+                                 
                                 </tbody>
                               </table>
                         </div>
                     </div>
                 </div>
-            </div><!--Today Customer Bill List End-->
+            </div><!-- End Today Expence List-->
+
 
         </div>
     </div>
@@ -553,4 +440,5 @@
     <script src="assets/js/table-search.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
