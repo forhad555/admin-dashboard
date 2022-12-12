@@ -181,20 +181,53 @@ body {
    font-size: var(--card-header-text-size);
 }
 
-.main-section .card .card-body .today-income h4, .main-section .card .card-body .today-expence h4, .main-section .card .card-body .monthly-income h4, .main-section .card .card-body .monthly-expence h4 {
+.main-section .card .card-body .today-income h4 {
     text-transform: uppercase;
     font-size: 16px;
     color: var(--primary-color);
 }
 
+.main-section .card .card-body .today-expence h4 {
+    text-transform: uppercase;
+    font-size: 16px;
+    color: var(--primary-color);
+}
+
+.main-section .card .card-body .monthly-income h4 {
+    text-transform: uppercase;
+    font-size: 16px;
+    color: var(--primary-color);
+}
+
+.main-section .card .card-body .monthly-expence h4 {
+    text-transform: uppercase;
+    font-size: 16px;
+    color: var(--primary-color);
+}
+
+.main-section .card .card-body .today-income h3 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #17ab75;
+}
+
+.main-section .card .card-body .today-expence h3 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #f47192;
+}
 
 
-.main-section .card .card-body .today-income h3,
-.main-section .card .card-body .today-expence h3,
-.main-section .card .card-body .monthly-income h3,
+.main-section .card .card-body .monthly-income h3 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #17ab75;
+}
+
 .main-section .card .card-body .monthly-expence h3 {
     font-size: 30px;
     font-weight: 600;
+    color: #f47192;
 }
 
 .main-section .card .card-body i {
@@ -281,10 +314,15 @@ tbody.tbody-text {
     border: 0;
     font-size: 16px;
     color: #5c5c5e;
+    transition: var(--trans-03);
 }
 
 .customer-bill-list-filter .form-select:focus {
     box-shadow: none;
+}
+
+.customer-bill-list-filter .form-select:hover {
+    background-color: #edf3fa;
 }
 
 button.export-data {
@@ -304,7 +342,7 @@ button.export-data:focus,
 button.export-data-toggle:hover,
 button.export-data-toggle:focus {
     border: 1px solid #ced4da;
-    background-color: #D3E3FD;
+    background-color: #edf3fa;
 }
 
 .bill-list-title {
