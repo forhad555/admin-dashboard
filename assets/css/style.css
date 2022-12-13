@@ -381,6 +381,63 @@ td.money-minus {
     color: #fa3f5f;
 }
 
+/* New Connection CSS */
+.add-new-con input[type=text] {
+    padding: 8px 15px;
+    display: inline-block;
+    border: 1px solid #dddcdc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .add-new-con input::placeholder {
+    color: #858585;
+    font-weight: 300;
+    font-size: 15px;
+  }
+
+  .add-new-con label {
+    font-weight: 400;
+    font-size: 16px;
+    color: #424242;
+}
+
+  .add-new-con select{
+    padding: 8px 15px;
+    display: inline-block;
+    border: 1px solid #dddcdc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-weight: 300;
+    font-size: 15px;
+  }
+
+
+  .add-new-con input[type=email] {
+    padding: 8px 15px;
+    display: inline-block;
+    border: 1px solid #dddcdc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
+  }
+  .add-new-con input[type=date] {
+    padding: 8px 15px;
+    display: inline-block;
+    border: 1px solid #dddcdc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-weight: 300;
+    font-size: 15px;
+  }
+
+  .add-new-con textarea {
+    padding: 8px 15px;
+    display: inline-block;
+    border: 1px solid #dddcdc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
 
 
 
