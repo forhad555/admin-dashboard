@@ -24,6 +24,12 @@
     --card-header-border: 1px solid #eeeeee;
     --card-header-padding: 10px 20px;
     --card-header-text-size: 16px;
+    --card-footer-border: 1px solid #eeeeee;
+    --card-footer-padding: 10px 20px;
+    --card-footer-text-size: 16px;
+    --card-footer-bg: #ffffff;
+
+    
 
     /* Transitions */
     --trans-02: all 0.2s ease;
@@ -93,6 +99,13 @@ body {
     color: #333333;
     background-color: #D3E3FD;
 }
+
+.sidebar ul.sidebar-nav li a:focus {
+    color: #333333;
+    background-color: #D3E3FD;
+}
+
+
 .sidebar ul.sidebar-nav li a i {
     min-width: 50px;
     border-radius: 6px;
@@ -173,6 +186,12 @@ body {
     background-color: var(--card-main-bg);
     border-bottom: var(--card-header-border);
     padding: var(--card-header-padding);
+}
+
+.card-footer-main {
+    background-color: var(--card-footer-bg);
+    border-top: var(--card-footer-border);
+    padding: var(--card-footer-padding);
 }
 
 
@@ -437,9 +456,21 @@ td.money-minus {
     border: 1px solid #dddcdc;
     border-radius: 4px;
     box-sizing: border-box;
+    color: #858585;
+    font-size: 15px;
 }
 
+.add-new-con .form-control:focus {
+    border: 1px solid #5998f6;
+    box-shadow: none;
+    background-color: #f3f7ff;
+}
 
+.add-new-con select:focus {
+    border: 1px solid #5998f6;
+    box-shadow: none;
+    background-color: #f3f7ff;
+}
 
 @media (max-width: 768px) {
     .sidebar {
