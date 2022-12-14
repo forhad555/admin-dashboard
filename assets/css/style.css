@@ -22,7 +22,8 @@
     --card-main-box-shadow: 0 0 0.875rem 0 rgb(41 48 66 / 5%);
     --card-main-border-radius: 5px ;
     --card-header-border: 1px solid #eeeeee;
-    --card-header-padding: 10px 20px;
+    --card-header-bg: #ffffff;
+    --card-header-padding: 15px 20px;
     --card-header-text-size: 16px;
     --card-footer-border: 1px solid #eeeeee;
     --card-footer-padding: 10px 20px;
@@ -183,7 +184,7 @@ body {
 }
 
 .card-header-main {
-    background-color: var(--card-main-bg);
+    background-color: var(--card-header-bg);
     border-bottom: var(--card-header-border);
     padding: var(--card-header-padding);
 }
@@ -472,6 +473,10 @@ td.money-minus {
     background-color: #f3f7ff;
 }
 
+.manager-input-form {
+    width: 700px;
+}
+
 @media (max-width: 768px) {
     .sidebar {
         display: none;
@@ -482,8 +487,22 @@ td.money-minus {
         width: 100%;
     }
 
+    .manager-input-form {
+        width: 100%;
+    }
+
     .my-navbar {
         left: 0;
         width: 100%;
     }
+}
+
+
+@media (max-width: 1024px) {
+
+    .manager-input-form {
+        width: 100%;
+    }
+
+
 }
