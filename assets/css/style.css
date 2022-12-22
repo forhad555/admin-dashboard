@@ -1,24 +1,25 @@
 /* Google Inter Font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Rubik', sans-serif;
     box-sizing: border-box;
 }
 
 :root{
     /* Colors */
     --body-color:#f2f7ff;
-    --sidebar-color:#ffffff;
+    --sidebar-color:#1D2033;
     --sidebar-text-color:#707070;
     --sidebar-icon-color:#707070;
     --selection-text-color:#ffffff;
     --primary-color:#0d6efd;
     --card-main-bg: #ffffff;
 
-    --card-main-border: 1px solid #eeeeee;
+    --card-main-border: 1px solid #dddddd;
     --card-main-box-shadow: 0 0 0.875rem 0 rgb(41 48 66 / 5%);
     --card-main-border-radius: 5px ;
     --card-header-border: 1px solid #eeeeee;
@@ -59,7 +60,7 @@
 .sidebar:hover::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background: #CACEDA; 
+    background: #1D2033; 
 }
 
 
@@ -86,24 +87,25 @@ body {
 
 .sidebar ul.sidebar-nav li a {
     text-decoration: none;
-    color: #6d6b6b;
+    color: #bfbaba;
     display: block;
-    padding: 10px 0;
-    border-radius: 10px;
+    padding: 10px 15px;
     transition: var(--trans-04);
     font-size: 15px;
     display: flex;
     align-items: center;
-    font-weight: 500;
+    font-weight: 400;
 }
 .sidebar ul.sidebar-nav li a:hover {
-    color: #333333;
-    background-color: #D3E3FD;
+    color: #ffffff;
+    background-color: #343647;
+    border-left: 3px solid #ffffff;
+    transition: var(--trans-03);
 }
 
 .sidebar ul.sidebar-nav li a:focus {
-    color: #333333;
-    background-color: #D3E3FD;
+    color: #ffffff;
+    background-color: #343647;
 }
 
 
@@ -120,13 +122,13 @@ body {
 .sidebar ul li.sidebar-title h4 {
     font-size: 12px;
     text-transform: uppercase;
-    color: #959595;
+    color: #7a7a7a;
     padding: 15px 0;
     font-weight: 600;
-    border-bottom: 1px solid #ebebeb;
+    border-bottom: 1px solid #252525;
     margin-bottom: 10px;
+    margin-left: 30px;
 }
-
 
 .sidebar .brand-name {
     position: fixed;
@@ -139,6 +141,7 @@ body {
 
 .sidebar ul.sidebar-nav {
     margin-top: 60px;
+    padding: 0;
 }
 
 
@@ -180,7 +183,7 @@ body {
     background-color: var(--card-main-bg);
     border:var(--card-main-border);
     border-radius: var(--card-main-border-radius);
-    box-shadow: var(--card-main-box-shadow);
+    /* box-shadow: var(--card-main-box-shadow); */
 }
 
 .card-header-main {
@@ -201,58 +204,78 @@ body {
    font-size: var(--card-header-text-size);
 }
 
+.card-body.box-1 {
+    background: linear-gradient(132deg, rgb(33 79 246) 0.00%, rgb(109 137 237) 100.00%);
+}
+
+.card-body.box-2 {
+    background: linear-gradient(132deg, rgb(211 24 81) 0.00%, rgb(255 137 146) 100.00%);
+}
+
+.card-body.box-3 {
+    background: linear-gradient(132deg, rgb(108 13 207) 0.00%, rgb(188 127 255) 100.00%);
+}
+
+.card-body.box-4 {
+    background: linear-gradient(132deg, rgb(237 29 112) 0.00%, rgb(255 169 184) 100.00%);
+}
+
 .main-section .card .card-body .today-income h4 {
     text-transform: uppercase;
     font-size: 16px;
-    color: var(--primary-color);
+    font-weight: 400;
+    color:#ffffff;
 }
 
 .main-section .card .card-body .today-expence h4 {
     text-transform: uppercase;
     font-size: 16px;
-    color: var(--primary-color);
+    font-weight: 400;
+    color:#ffffff;
 }
 
 .main-section .card .card-body .monthly-income h4 {
     text-transform: uppercase;
     font-size: 16px;
-    color: var(--primary-color);
+    font-weight: 400;
+    color:#ffffff;
 }
 
 .main-section .card .card-body .monthly-expence h4 {
     text-transform: uppercase;
     font-size: 16px;
-    color: var(--primary-color);
+    font-weight: 400;
+    color:#ffffff;
 }
 
 .main-section .card .card-body .today-income h3 {
     font-size: 30px;
     font-weight: 600;
-    color: #17ab75;
+    color:#ffffff;
 }
 
 .main-section .card .card-body .today-expence h3 {
     font-size: 30px;
     font-weight: 600;
-    color: #f47192;
+    color:#ffffff;
 }
 
 
 .main-section .card .card-body .monthly-income h3 {
     font-size: 30px;
     font-weight: 600;
-    color: #17ab75;
+    color:#ffffff;
 }
 
 .main-section .card .card-body .monthly-expence h3 {
     font-size: 30px;
     font-weight: 600;
-    color: #f47192;
+    color:#ffffff;
 }
 
 .main-section .card .card-body i {
     font-size: 50px;
-    color: #908f8f;
+    color: #d3d3d3;
 }
 
 .my-navbar {
@@ -335,6 +358,7 @@ tbody.tbody-text {
     font-size: 16px;
     color: #5c5c5e;
     transition: var(--trans-03);
+    border: 1px solid #dddddd;
 }
 
 .customer-bill-list-filter .form-select:focus {
